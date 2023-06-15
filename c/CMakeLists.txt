@@ -16,8 +16,20 @@ set(SLL_SOURCE_FILE ${LL_SOURCES}/single-linked-list/single-linked-list.c)
 set(DLL_HEADER_PATH ${LL_HEADERS}/double-linked-list)
 set(DLL_SOURCE_FILE ${LL_SOURCES}/double-linked-list/double-linked-list.c)
 
-include_directories(${SLL_HEADER_PATH} ${DLL_HEADER_PATH})
+# 스택 헤더 상위 경로
+set(STACK_HEADERS include/stack)
+# 스택 소스 파일 상위 경로
+set(STACK_SOURCES src/stack)
 
-# 단일 연결 리스트 테스트 소스 파일
+# 배열 스택 헤더, 소스 파일
+set(ARRAY_STACK_HEADER_PATH ${STACK_HEADERS}/array-stack)
+set(ARRAY_STACK_SOURCE_FILE ${STACK_SOURCES}/array-stack/array-stack.c)
+
+include_directories(${SLL_HEADER_PATH} ${DLL_HEADER_PATH} ${ARRAY_STACK_HEADER_PATH})
+
+# 연결 리스트 테스트 소스 파일
 add_executable(main-sll src/linked-list/single-linked-list/main.c ${SLL_SOURCE_FILE})
 add_executable(main-dll src/linked-list/double-linked-list/main.c ${DLL_SOURCE_FILE})
+
+# 스택 테스트 소스 파일
+add_executable(main-array-stack src/stack/array-stack/main.c ${ARRAY_STACK_SOURCE_FILE})
