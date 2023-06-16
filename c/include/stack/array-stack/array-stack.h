@@ -59,7 +59,7 @@ int peek(Stack *stack);
  * 스택에 특정 데이터가 있는지 확인한다.
  * @param stack 대상 스택 포인터
  * @param data 대상 데이터
- * @return 스택에 해당 데이터가 없는경우 -1 있는 경우 해당 데이터의 인덱스
+ * @return 스택에 해당 데이터가 없는경우 -1 있는 경우 top 기준으로 해당 데이터가 있는 위치
  */
 int search(Stack *stack, int data);
 

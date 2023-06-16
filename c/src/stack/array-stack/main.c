@@ -32,6 +32,6 @@ int main() {
     printf("peek(): %d\n", peek(&stack));
     printAll(&stack);
 
-    printf("search(): %d\n", search(&stack, 55));
+    printf("search(): %d\n", search(&stack, 4));
     return 0;
 }

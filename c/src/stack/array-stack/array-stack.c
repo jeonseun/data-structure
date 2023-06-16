@@ -42,11 +42,12 @@ int search(Stack *stack, int data) {
     if (isEmpty(stack)) {
         return -1;
     }
-
-    for (int i = 0; i <= stack->top; ++i) {
+    int popCount = 1;
+    for (int i = stack->top; i >= 0; i--) {
         if (stack->data[i] == data) {
-            return i;
+            return popCount;
         }
+        popCount++;
     }
     return -1;
 }
