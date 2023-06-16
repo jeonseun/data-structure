@@ -6,8 +6,9 @@ int main() {
     initStack(&stack);
 
     for (int i = 0; i < 10; ++i) {
-        printf("push(): %d\n", i);
-        push(&stack, i);
+        char str[10];
+        sprintf(str, "TEST 0%d", i);
+        push(&stack, str);
     }
 
     printAll(&stack);
@@ -25,13 +26,13 @@ int main() {
     }
 
     for (int i = 0; i < 3; ++i) {
-        printf("pop(): %d\n", pop(&stack));
+        printf("pop(): %s\n", pop(&stack));
     }
     printAll(&stack);
 
-    printf("peek(): %d\n", peek(&stack));
+    printf("peek(): %s\n", peek(&stack));
     printAll(&stack);
 
-    printf("search(): %d\n", search(&stack, 4));
+    printf("search(): %d\n", search(&stack, "TEST 00"));
     return 0;
 }

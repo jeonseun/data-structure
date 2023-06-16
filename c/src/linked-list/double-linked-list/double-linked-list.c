@@ -1,7 +1,4 @@
 #include "double-linked-list.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 void initList(List *list) {
     // 더미 노드 할당 및 초기화

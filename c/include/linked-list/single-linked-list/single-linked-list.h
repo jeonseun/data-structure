@@ -1,5 +1,6 @@
 #ifndef C_SINGLE_LINKED_LIST_H
 #define C_SINGLE_LINKED_LIST_H
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 

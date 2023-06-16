@@ -1,5 +1,8 @@
 #ifndef C_DOUBLE_LINKED_LIST_H
 #define C_DOUBLE_LINKED_LIST_H
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 typedef struct Node {
     char data[20];
