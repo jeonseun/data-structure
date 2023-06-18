@@ -1,13 +1,16 @@
-#ifndef C_ARRAY_STACK_H
-#define C_ARRAY_STACK_H
+#ifndef C_LIST_STACK_H
+#define C_LIST_STACK_H
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#define STACK_SIZE 10
+#include <stdlib.h>
+
+typedef struct Node {
+    char data[20];
+    struct Node *next;
+} Node;
 
 typedef struct Stack {
-    char *data[STACK_SIZE];
-    int top;
+    Node *top;
     int size;
 } Stack;
 
@@ -18,17 +21,10 @@ typedef struct Stack {
 void initStack(Stack *stack);
 
 /**
- * 스택이 가득차있는지 확인한다.
- * @param stack 대상 스택 포인터
- * @return 스택이 가득찬 경우 1, 공간이 있는 경우 0
- */
-int isFull(Stack *stack);
-
-/**
  * 스택에 데이터를 추가한다.
  * @param stack 대상 스택 포인터
  * @param data 추가할 데이터
- * @return 스택이 가득찬 경우 -1 이외의 경우는 데이터를 추가한 뒤 스택의 크기
+ * @return 데이터를 추가한 뒤 스택의 크기
  */
 int push(Stack *stack, char *data);
 
@@ -61,9 +57,12 @@ char *peek(Stack *stack);
  */
 int search(Stack *stack, char *target);
 
+
 /**
  * 스택의 모든 요소를 출력한다.
  * @param stack 대상 스택 포인터
  */
 void printAll(Stack *stack);
-#endif //C_ARRAY_STACK_H
+
+#endif //C_LIST_STACK_H
+

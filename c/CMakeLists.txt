@@ -25,7 +25,11 @@ set(STACK_SOURCES src/stack)
 set(ARRAY_STACK_HEADER_PATH ${STACK_HEADERS}/array-stack)
 set(ARRAY_STACK_SOURCE_FILE ${STACK_SOURCES}/array-stack/array-stack.c)
 
-include_directories(${SLL_HEADER_PATH} ${DLL_HEADER_PATH} ${ARRAY_STACK_HEADER_PATH})
+# 리스트 스택 헤더, 소스 파일
+set(LIST_STACK_HEADER_PATH ${STACK_HEADERS}/list-stack)
+set(LIST_STACK_SOURCE_FILE ${STACK_SOURCES}/list-stack/list-stack.c)
+
+include_directories(${SLL_HEADER_PATH} ${DLL_HEADER_PATH} ${ARRAY_STACK_HEADER_PATH} ${LIST_STACK_HEADER_PATH})
 
 # 연결 리스트 테스트 소스 파일
 add_executable(main-sll src/linked-list/single-linked-list/main.c ${SLL_SOURCE_FILE})
@@ -33,3 +37,4 @@ add_executable(main-dll src/linked-list/double-linked-list/main.c ${DLL_SOURCE_F
 
 # 스택 테스트 소스 파일
 add_executable(main-array-stack src/stack/array-stack/main.c ${ARRAY_STACK_SOURCE_FILE})
+add_executable(main-list-stack src/stack/list-stack/main.c ${LIST_STACK_SOURCE_FILE})

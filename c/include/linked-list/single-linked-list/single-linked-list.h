@@ -26,10 +26,6 @@ void initList(List *list);
  */
 void printAll(List *list);
 
-static Node *createNode(char *data);
-
-static void link(Node *target, Node *newNode);
-
 /**
  * 연결 리스트 맨 앞에 노드를 추가한다.
  * @param list 대상 리스트 포인터

@@ -34,14 +34,6 @@ void printAll(List *list);
  */
 void printAllReverse(List *list);
 
-static Node *findNode(List *list, char *data);
-
-static Node *createNode(char *data);
-
-static void linkBefore(Node *target, Node *newNode);
-
-static void linkAfter(Node *target, Node *newNode);
-
 /**
  * 연결 리스트의 맨 앞에 노드를 추가한다.
  * @param list 대상 리스트 포인터

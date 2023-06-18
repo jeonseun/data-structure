@@ -45,13 +45,13 @@ char *peek(Stack *stack) {
     return stack->data[stack->top];
 }
 
-int search(Stack *stack, char *data) {
+int search(Stack *stack, char *target) {
     if (isEmpty(stack)) {
         return -1;
     }
     int popCount = 1;
     for (int i = stack->top; i >= 0; i--) {
-        if (strcmp(stack->data[i], data) == 0) {
+        if (strcmp(stack->data[i], target) == 0) {
             return popCount;
         }
         popCount++;
