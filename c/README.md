@@ -9,3 +9,4 @@
   - [이중 연결 리스트](./src/linked-list/double-linked-list/double-linked-list.c)
 - [스택](./src/stack)
   - [스택 - 배열](./src/stack/array-stack/array-stack.c)
+  - [스택 - 리스트](./src/stack/list-stack/list-stack.c)
