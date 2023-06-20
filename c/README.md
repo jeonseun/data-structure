@@ -10,3 +10,5 @@
 - [스택](./src/stack)
   - [스택 - 배열](./src/stack/array-stack/array-stack.c)
   - [스택 - 리스트](./src/stack/list-stack/list-stack.c)
+- [큐](./src/queue)
+  - [큐 - 배열](./src/queue/array-queue/array-queue.c)
