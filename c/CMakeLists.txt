@@ -35,6 +35,9 @@ set(QUEUE_SOURCES src/queue)
 set(ARRAY_QUEUE_HEADER_PATH ${QUEUE_HEADERS}/array-queue)
 set(ARRAY_QUEUE_SOURCE_FILE ${QUEUE_SOURCES}/array-queue/array-queue.c)
 
+# 리스트 큐 헤더, 소스 파일
+set(LIST_QUEUE_HEADER_PATH ${QUEUE_HEADERS}/list-queue)
+set(LIST_QUEUE_SOURCE_FILE ${QUEUE_SOURCES}/list-queue/list-queue.c)
 
 include_directories(
         ${SLL_HEADER_PATH}
@@ -42,6 +45,7 @@ include_directories(
         ${ARRAY_STACK_HEADER_PATH}
         ${LIST_STACK_HEADER_PATH}
         ${ARRAY_QUEUE_HEADER_PATH}
+        ${LIST_QUEUE_HEADER_PATH}
 )
 
 # 연결 리스트 테스트 소스 파일
@@ -54,3 +58,4 @@ add_executable(main-list-stack src/stack/list-stack/main.c ${LIST_STACK_SOURCE_F
 
 # 큐 테스트 소스 파일
 add_executable(main-array-queue src/queue/array-queue/main.c ${ARRAY_QUEUE_SOURCE_FILE})
+add_executable(main-list-queue src/queue/list-queue/main.c ${LIST_QUEUE_SOURCE_FILE})
